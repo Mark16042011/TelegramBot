@@ -1,3 +1,4 @@
+from docx import Document
 from telebot import TeleBot
 from telebot.apihelper import send_message
 from telebot.types import Message
@@ -28,5 +29,10 @@ def povestka(message: Message):
     else:
         bot.send_message(chat_id=message.chat.id, text="База, разходимся, он не совершеннолетний...")
 
+def aboba():
+    document = Document("novaya_povestka_po_mobilizacii_forma.docx").paragraphs
+    print(document)
+
 if __name__ == '__main__':
-    bot.polling(none_stop=True)
+    aboba()
+    #bot.polling(none_stop=True)
