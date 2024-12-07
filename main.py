@@ -29,10 +29,9 @@ def povestka(message: Message):
     else:
         bot.send_message(chat_id=message.chat.id, text="База, разходимся, он не совершеннолетний...")
 
-def aboba():
-    document = Document("novaya_povestka_po_mobilizacii_forma.docx").paragraphs
-    print(document)
+#def aboba():
+    #document = Document("novaya_povestka_po_mobilizacii_forma.docx").paragraphs
+    #print(document)
 
 if __name__ == '__main__':
-    aboba()
-    #bot.polling(none_stop=True)
+    bot.polling(none_stop=True)
